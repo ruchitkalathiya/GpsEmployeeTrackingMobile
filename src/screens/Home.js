@@ -86,8 +86,10 @@ const Home = ({navigation}) => {
       //   Geolocation.clearWatch(watchID);
       // };
       if(ilstatuss){
-        setloading(0)
+        setloading(0);
+        
         getData();
+
       }
       }, [])
 
@@ -125,6 +127,7 @@ const Home = ({navigation}) => {
       };
 
       const getData =  async() => {
+        captureImage('photo');
         try {
           var value1 =  await AsyncStorage.getItem('storage_Key_Login')
           var value2 =  await AsyncStorage.getItem('userids')
@@ -144,7 +147,7 @@ const Home = ({navigation}) => {
           // // console.log(value3);
           // // console.log(value4);
           console.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHlllllllllllllllllllllllllllllllllll");
-          captureImage('photo'); 
+
           GetLocation.getCurrentPosition({
             enableHighAccuracy: true,
             timeout: 15000,

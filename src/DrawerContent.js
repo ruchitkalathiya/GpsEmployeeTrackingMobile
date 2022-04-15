@@ -100,7 +100,7 @@ const DrawerContent=(props)=>{
    const [name, setname] = useState('');
    const [email, setemail] = useState('');
    const [phonenumber, setphonenumber] = useState('');
-   const [url, seturl] = useState('');
+   const [url, seturl] = useState("http://192.168.56.1:5000/public//data//uploads//fileDatahellobackground.jpg");
    const [role, setrole] = useState('');
   
    
@@ -152,7 +152,7 @@ const DrawerContent=(props)=>{
       setemail(value6);
       setphonenumber(value7);
       setrole(value5);
-      seturl(value8);
+     // seturl(value8);
       // // console.log(value3);
       // // console.log(value4);
       console.log("HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
@@ -177,7 +177,7 @@ const DrawerContent=(props)=>{
             <View style={{justifyContent: 'center',alignItems: 'center'}}>
                 <Image
                     style={styles.logo}
-                    source={url}
+                    source={profileimage}
                     //source = {require('http://192.168.56.1:5000/public//data//uploads//fileDatahellobackground.jpg')}
                 /> 
                 <Text style={[styles.textStyleForlist,{fontWeight:'bold', fontSize:22,marginTop:20,marginBottom:8,}]}>{name}</Text>  
@@ -214,7 +214,7 @@ const DrawerContent=(props)=>{
         <View style={styles.footer}>
            <TouchableOpacity style={styles.bottomButtons} 
            onPress={() => handlePress()}>
-                 <Text style={styles.footerText}>Sign Out</Text>
+                 {/* <Text style={styles.footerText}>Sign Out</Text> */}
              </TouchableOpacity>
              </View>
       </SafeAreaView>
